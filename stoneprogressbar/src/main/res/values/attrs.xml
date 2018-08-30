@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HorizontalProgressBar">
+        <attr name="hpb_textSize" format="dimension" />
+        <attr name="hpb_textColor" format="color" />
+        <attr name="hpb_progress" format="float" />
+        <attr name="hpb_textLeftPadding" format="dimension" />
+        <attr name="hpb_textRightPadding" format="dimension" />
+        <attr name="hpb_textTopPadding" format="dimension" />
+        <attr name="hpb_textBottomPadding" format="dimension" />
+        <attr name="hpb_centerPadding" format="dimension" />
+        <attr name="hpb_progressBarHeight" format="dimension" />
+        <attr name="hpb_progressBarBackgroundColor" format="color" />
+        <attr name="hpb_progressBarForegroundColor" format="color" />
+    </declare-styleable>
+
+</resources>

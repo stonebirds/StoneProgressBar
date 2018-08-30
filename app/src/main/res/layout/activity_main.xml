@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="进度条"
+        android:textColor="#000000"
+        android:textSize="25sp" />
+
+    <com.stone.stoneprogressbar.view.HorizontalProgressBar
+        android:id="@+id/hpb"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        app:hpb_progressBarForegroundColor="@color/green_32CD32" />
+
+    <com.stone.stoneprogressbar.view.HorizontalProgressBar
+        android:id="@+id/hpb1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        app:hpb_progressBarForegroundColor="@color/blue_00B2EE" />
+
+    <com.stone.stoneprogressbar.view.HorizontalProgressBar
+        android:id="@+id/hpb2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        app:hpb_progressBarForegroundColor="@color/origin_FF4500" />
+
+    <com.stone.stoneprogressbar.view.HorizontalProgressBar
+        android:id="@+id/hpb3"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        app:hpb_progressBarForegroundColor="@color/yellow_FFD700" />
+
+    <com.stone.stoneprogressbar.view.HorizontalProgressBar
+        android:id="@+id/hpb4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_margin="16dp"
+        app:hpb_progressBarForegroundColor="@color/green_008B8B" />
+
+    <Button
+        android:id="@+id/btn_camera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@color/colorPrimary"
+        android:text="照相机"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+</LinearLayout>
