@@ -5,6 +5,13 @@
 
 ***
 
+效果图
+
+
+
+***
+
+
 # How to（集成步骤）
 
 ### Step 1. Add the JitPack repository to your build file
