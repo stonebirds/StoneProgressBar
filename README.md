@@ -1,4 +1,7 @@
-# StoneProgressBar
+# [https://github.com/stonebirds/StoneProgressBar](https://github.com/stonebirds/StoneProgressBar)
+
+[ ![Download](null/packages/flybirds/StoneProgressBar/stoneprogressbar/images/download.svg?version=1.0.0) ](https://bintray.com/flybirds/StoneProgressBar/stoneprogressbar/1.0.0/link)
+
 ## 自定义进度条
 
 可以根据需求自定义进度条指示器的文字大小、文字颜色以及进度条高度、颜色、进度条背景色
@@ -11,21 +14,28 @@
 
 ***
 
-
 # How to（集成步骤）
 
-### Step 1. Add the JitPack repository to your build file
+## Adding to project
+```
+<dependency>
+  <groupId>com.stone</groupId>
+  <artifactId>stoneprogressbar</artifactId>
+  <version>1.0.0</version>
+  <type>pom</type>
+</dependency>
+```
 
-Add it in your root build.gradle at the end of repositories:
-
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+### or
+```   
+allprojects {
+		    repositories {
+			        jcenter()
+		    }
 	}
-### Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.stonebirds:StoneProgressBar:v1.0.0'
+	        implementation 'com.stone:stoneprogressbar:1.0.0'
 	}
+
+```
