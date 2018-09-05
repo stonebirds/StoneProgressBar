@@ -35,7 +35,7 @@ allprojects {
 }
 
 dependencies {
-        implementation 'com.stone:stoneprogressbar:1.0.0'
+    implementation 'com.stone:stoneprogressbar:1.0.0'
 }
 
 ```
