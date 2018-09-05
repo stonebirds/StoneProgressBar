@@ -1,21 +1,33 @@
 package com.stone.stoneprogressbar;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.stone.stoneprogressbar.view.HorizontalProgressBar;
 
 public class MainActivity extends AppCompatActivity {
+
+    private Bitmap bitmap;
+    private ImageView iv;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+
+        iv = findViewById(R.id.iv_image);
 
         Button btnCamera = findViewById(R.id.btn_camera);
 
@@ -37,8 +49,34 @@ public class MainActivity extends AppCompatActivity {
         btnCamera.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, CameraActivity.class));
+                startActivity(new Intent(MainActivity.this, ViewActivity.class));
             }
         });
+
+        initBitmap();
+    }
+
+    private void initBitmap() {
+        Bitmap bmpBuffer = Bitmap.createBitmap(150,150,Bitmap.Config.RGB_565);
+        Canvas canvas = new Canvas(bmpBuffer);
+        bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
+        canvas.drawBitmap(bitmap,0,0,null);
+        //对图片进行缩放
+//        int bmpWidth = bitmap.getWidth();
+//        int bmpHeight =bitmap.getHeight();
+//        Rect src = new Rect(0, 0, bmpWidth, bmpHeight);
+//        Rect dst = new Rect(0, bmpHeight, bmpWidth * 3, bmpHeight * 3 + bmpHeight);
+//        canvas.drawBitmap(bitmap, src, dst, null);
+        iv.setImageBitmap(bmpBuffer);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (bitmap != null && !bitmap.isRecycled()){
+            bitmap.recycle();
+            System.gc();
+            bitmap = null;
+        }
     }
 }
