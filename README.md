@@ -1,6 +1,6 @@
 # [https://github.com/stonebirds/StoneProgressBar](https://github.com/stonebirds/StoneProgressBar)
 
-[ ![Download](null/packages/flybirds/StoneProgressBar/stoneprogressbar/images/download.svg?version=1.0.0) ](https://bintray.com/flybirds/StoneProgressBar/stoneprogressbar/1.0.0/link)
+[ ![Download](https://api.bintray.com/packages/flybirds/StoneProgressBar/stoneprogressbar/images/download.svg?version=1.0.0) ](https://bintray.com/flybirds/StoneProgressBar/stoneprogressbar/1.0.0/link)
 
 ## 自定义进度条
 
@@ -29,10 +29,10 @@
 ### or
 ```   
 allprojects {
-		    repositories {
-			        jcenter()
-		    }
-	}
+    repositories {
+        jcenter()
+    }
+}
 
 	dependencies {
 	        implementation 'com.stone:stoneprogressbar:1.0.0'
