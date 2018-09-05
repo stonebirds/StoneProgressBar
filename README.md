@@ -10,7 +10,9 @@
 
 效果图
 
-![效果图](https://raw.githubusercontent.com/stonebirds/StoneProgressBar/4bd5528ad44464ccef408c051cf727cd13754070/gif/1.gif=540*960)
+![效果图](https://raw.githubusercontent.com/stonebirds/StoneProgressBar/4bd5528ad44464ccef408c051cf727cd13754070/gif/1.gif)
+
+<img src="https://raw.githubusercontent.com/stonebirds/StoneProgressBar/4bd5528ad44464ccef408c051cf727cd13754070/gif/1.gif" width="540" hegiht="960" align=center />
 
 ***
 
