@@ -39,3 +39,21 @@ dependencies {
 }
 
 ```
+
+***
+
+### 字段说明
+
+| 属性                                                      | 说明                 | 
+| :---                                                      | :---                 |
+| app:hpb_centerPadding="5dp"                               | 指示器与进度条的间距 |
+| app:hpb_progressBarBackgroundColor="@color/colorPrimary"  | 进度条背景色         |
+| app:hpb_progressBarForegroundColor="@color/colorAccent"   | 进度条前景色         |
+| app:hpb_progressBarHeight="2dp"                           | 进度条高度           |
+| app:hpb_textBottomPadding="5dp"                           | 指示器bottomPadding  |
+| app:hpb_textLeftPadding="5dp"                             | 指示器leftPadding    |
+| app:hpb_textRightPadding="5dp"                            | 指示器rightPadding   |
+| app:hpb_textTopPadding="5dp"                              | 指示器topPadding     |
+| app:hpb_textSize="12sp"                                   | 指示器文字大小       |
+| app:hpb_textColor="#FFFFFF"                               | 指示器文字颜色       |
+| app:hpb_progress="20"                                     | 进度值               |
