@@ -59,3 +59,6 @@ dependencies {
 | app:hpb_textSize="12sp"                                   | 指示器文字大小       |
 | app:hpb_textColor="#FFFFFF"                               | 指示器文字颜色       |
 | app:hpb_progress="20"                                     | 进度值               |
+
+因为本人是第一次发布，所以参考发布流程 [严振杰的博客](https://blog.csdn.net/yanzhenjie1003/article/details/51672530)
+在此感谢！
