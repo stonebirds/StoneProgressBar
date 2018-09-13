@@ -1,4 +1,4 @@
-package com.stone.stoneprogressbar;
+package com.stone.stoneprogressbar.activity;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -9,7 +9,13 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.stone.stoneprogressbar.R;
+import com.stone.stoneprogressbar.view.BallMoveView;
+import com.stone.stoneprogressbar.view.WatchView;
+
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ViewActivity extends AppCompatActivity {
 
@@ -21,6 +27,7 @@ public class ViewActivity extends AppCompatActivity {
     private ImageView iv_6;
     private ImageView iv_7;
     private ImageView iv_8;
+    private BallMoveView bmv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +35,19 @@ public class ViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_view);
 
         initView();
+
+        initBallView();
+        initWatchView();
+    }
+
+    private void initWatchView() {
+        WatchView watchView = findViewById(R.id.wv_watch_view);
+        watchView.run();
+    }
+
+    private void initBallView() {
+        bmv = findViewById(R.id.bmv);
+        bmv.startMove();
     }
 
     private void initView() {
@@ -150,5 +170,11 @@ public class ViewActivity extends AppCompatActivity {
 
     private void setImageView8() {
 
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        bmv.stop();
     }
 }

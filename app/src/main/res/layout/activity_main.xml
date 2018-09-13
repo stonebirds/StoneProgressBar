@@ -1,67 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/view_root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".activity.MainActivity">
 
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="进度条"
-        android:textColor="#000000"
-        android:textSize="25sp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    <com.stone.stoneprogressbar.view.HorizontalProgressBar
-        android:id="@+id/hpb"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="16dp"
-        app:hpb_progressBarForegroundColor="@color/green_32CD32" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="进度条"
+            android:textColor="#000000"
+            android:textSize="25sp" />
 
-    <com.stone.stoneprogressbar.view.HorizontalProgressBar
-        android:id="@+id/hpb1"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="16dp"
-        app:hpb_progressBarForegroundColor="@color/blue_00B2EE" />
+        <com.stone.stoneprogressbar.view.HorizontalProgressBar
+            android:id="@+id/hpb"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            app:hpb_progressBarForegroundColor="@color/green_32CD32" />
 
-    <com.stone.stoneprogressbar.view.HorizontalProgressBar
-        android:id="@+id/hpb2"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="16dp"
-        app:hpb_progressBarForegroundColor="@color/origin_FF4500" />
+        <com.stone.stoneprogressbar.view.HorizontalProgressBar
+            android:id="@+id/hpb1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            app:hpb_progressBarForegroundColor="@color/blue_00B2EE" />
 
-    <com.stone.stoneprogressbar.view.HorizontalProgressBar
-        android:id="@+id/hpb3"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="16dp"
-        app:hpb_progressBarForegroundColor="@color/yellow_FFD700" />
+        <com.stone.stoneprogressbar.view.HorizontalProgressBar
+            android:id="@+id/hpb2"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            app:hpb_progressBarForegroundColor="@color/origin_FF4500" />
 
-    <com.stone.stoneprogressbar.view.HorizontalProgressBar
-        android:id="@+id/hpb4"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="16dp"
-        app:hpb_progressBarForegroundColor="@color/green_008B8B" />
+        <com.stone.stoneprogressbar.view.HorizontalProgressBar
+            android:id="@+id/hpb3"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            app:hpb_progressBarForegroundColor="@color/yellow_FFD700" />
 
-    <ImageView
-        android:id="@+id/iv_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <com.stone.stoneprogressbar.view.HorizontalProgressBar
+            android:id="@+id/hpb4"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="16dp"
+            app:hpb_progressBarForegroundColor="@color/green_008B8B" />
 
-    <Button
-        android:id="@+id/btn_camera"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@color/colorPrimary"
-        android:text="照相机"
-        android:textColor="#ffffff"
-        android:textSize="18sp" />
-</LinearLayout>
+        <com.stone.stoneprogressbar.view.ShadowTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="我是一段性感的文字"
+            android:textSize="24sp" />
+
+        <ImageView
+            android:id="@+id/iv_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimary"
+            android:text="照相机"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_draw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimary"
+            android:text="手绘板"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_nfc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimary"
+            android:text="NFC"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_gua"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimary"
+            android:text="GUAGUALE"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</ScrollView>

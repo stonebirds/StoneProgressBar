@@ -1,4 +1,4 @@
-package com.stone.stoneprogressbar;
+package com.stone.stoneprogressbar.activity;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
@@ -24,9 +24,10 @@ import android.util.Size;
 import android.util.SparseIntArray;
 import android.view.Surface;
 import android.view.TextureView;
-import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.stone.stoneprogressbar.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;

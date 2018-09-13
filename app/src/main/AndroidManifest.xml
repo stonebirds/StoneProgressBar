@@ -3,6 +3,14 @@
     package="com.stone.stoneprogressbar">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <!-- NFC 相关权限 -->
+    <!-- 描述所需硬件特性 -->
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -11,15 +19,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CameraActivity" />
-        <activity android:name=".ViewActivity"></activity>
+        <activity android:name=".activity.CameraActivity" />
+        <activity android:name=".activity.ViewActivity" />
+        <activity android:name=".activity.DrawPlateActivity" />
+        <activity
+            android:name=".activity.NFCActivity"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:mimeType="*/*" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.GuaGuaLeActivity"></activity>
     </application>
 
 </manifest>

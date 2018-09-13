@@ -1,12 +1,9 @@
-package com.stone.stoneprogressbar;
+package com.stone.stoneprogressbar.activity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Paint;
-import android.graphics.Rect;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +11,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.stone.stoneprogressbar.R;
+import com.stone.stoneprogressbar.view.GuaGuaLeView;
 import com.stone.stoneprogressbar.view.HorizontalProgressBar;
 
 public class MainActivity extends AppCompatActivity {
@@ -30,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         iv = findViewById(R.id.iv_image);
 
         Button btnCamera = findViewById(R.id.btn_camera);
+        Button btn_draw = findViewById(R.id.btn_draw);
+        Button btn_nfc = findViewById(R.id.btn_nfc);
+        Button btn_gua = findViewById(R.id.btn_gua);
 
         HorizontalProgressBar mProgressBar = findViewById(R.id.hpb);
         mProgressBar.setCurrentProgress(0);
@@ -53,14 +55,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_draw.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, DrawPlateActivity.class));
+            }
+        });
+        btn_nfc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, NFCActivity.class));
+            }
+        });
+        btn_gua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, GuaGuaLeActivity.class));
+            }
+        });
+
         initBitmap();
     }
 
     private void initBitmap() {
-        Bitmap bmpBuffer = Bitmap.createBitmap(150,150,Bitmap.Config.RGB_565);
+        Bitmap bmpBuffer = Bitmap.createBitmap(150, 150, Bitmap.Config.RGB_565);
         Canvas canvas = new Canvas(bmpBuffer);
         bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
-        canvas.drawBitmap(bitmap,0,0,null);
+        canvas.drawBitmap(bitmap, 0, 0, null);
         //对图片进行缩放
 //        int bmpWidth = bitmap.getWidth();
 //        int bmpHeight =bitmap.getHeight();
@@ -73,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if (bitmap != null && !bitmap.isRecycled()){
+        if (bitmap != null && !bitmap.isRecycled()) {
             bitmap.recycle();
             System.gc();
             bitmap = null;
